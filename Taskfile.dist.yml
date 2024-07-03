@@ -116,7 +116,7 @@ tasks:
           task configure -- -D SOME_OPTION=True
     cmds: [{task: _configure, vars: {args: '{{.CLI_ARGS}}'}}]
   reconfigure:
-    desc: Erase all CMake cache entries and run confiiguration again.
+    desc: Erase all CMake cache entries and run configuration again.
     summary: |
       CMake configuration can have some sticky parameters. Use this when in need to start from a
       clean configuration, for instance when encountering issues with dependencies.
@@ -168,7 +168,7 @@ tasks:
   test-solv-cpp:
     desc: Run `libmamba` C++ based tests.
     summary: |
-      Run fast C++ tests of the libsolc C++ wrappers. Running this command will rebuild only
+      Run fast C++ tests of the libsolv C++ wrappers. Running this command will rebuild only
       `solv-cpp` and its tests, so compilation error may still happen when building other targets.
       Test options can be passed as extra command line arguments:
 
@@ -320,4 +320,4 @@ tasks:
 
           git clean -xdn
     cmds:
-      - rm -rf {{.BUILD_DIR}}'
+      - 'rm -rf {{.BUILD_DIR}}'
